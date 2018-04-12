@@ -41,7 +41,8 @@ const routes = [
   },
   {
     path: '/view/page1/banner',
-    component: banner
+    component: banner,
+    hidden: true
   },
   { path: '*', component: Page404 }
 ]

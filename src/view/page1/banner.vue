@@ -16,12 +16,9 @@ export default {
 .banner{
 .wrap{
 li{
-width: 150px;
+width: 50px;
 height: 50px;
 list-style: none;
-float: left;
-background-color: rgba(6, 4, 12, 0.125);
-position: relative;
 }
 }
 }

@@ -20,10 +20,10 @@
 export default {
   // name: 'nav',
   mounted: function () {
-    var carousel = document.getElementById('carousel')
-    var first = document.getElementById('first')
-    var second = document.getElementById('second')
-    var container = document.getElementsByClassName('container')[0]
+    let carousel = document.getElementById('carousel')
+    let first = document.getElementById('first')
+    let second = document.getElementById('second')
+    let container = document.getElementsByClassName('container')[0]
     second.innerHTML = document.getElementById('first').innerHTML
 
     // 横向 回调

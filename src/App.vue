@@ -2,14 +2,14 @@
   <div id="app">
     <div class="routerPage">
       <!-- <img src="./assets/logo.png"> -->
-      <router-link to="/view/page1/page1" class="a">page1</router-link>
+      <router-link to="/view/page1/form" class="a">form</router-link>
       <!-- <router-link to="/view/page2/page2">page2</router-link> -->
       <router-link to="/show" class="a">show</router-link>
 
       <!-- 动态路由 ： 获取标签内容-->
       <router-link to="/view/user/123" class="a">user123</router-link>
       <router-link to="/view/user/456" class="a">user456</router-link>
-      <router-link to="/view/user/456" class="a">banner</router-link>
+      <router-link to="/view/page1/banner" class="a">banner</router-link>
     </div>
     <div class="view">
        <router-view></router-view>
