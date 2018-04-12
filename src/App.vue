@@ -9,6 +9,7 @@
       <!-- 动态路由 ： 获取标签内容-->
       <router-link to="/view/user/123" class="a">user123</router-link>
       <router-link to="/view/user/456" class="a">user456</router-link>
+      <router-link to="/view/user/456" class="a">banner</router-link>
     </div>
     <div class="view">
        <router-view></router-view>
@@ -33,6 +34,7 @@ body{
     color: #2c3e50;
     display: flex;
     flex-direction: row;
+    color: aliceblue;
     /* margin-top: 60px; */
     .routerPage{
       // position: relative;
