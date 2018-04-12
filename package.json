@@ -12,7 +12,7 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js",
-    "mock": "json-server --watch mock/db.json",
+    "mock": "json-server mock/db.json --port 9090",
     "mockdev": "npm run mock & npm run dev"
   },
   "dependencies": {
