@@ -1,6 +1,6 @@
 <template>
   <div>
-      <!-- <button @click="add">+1</button> -->
+      <button @click="add">+1</button>
      <button @click="addss">+1</button>  <!--  事件处理函数变为addss -->
       <button @click="decss">-1</button>
       <!-- <button @click="dec">-1</button> -->
@@ -28,9 +28,9 @@ export default {
   methods: {
     // 当事件较多时，需写多个函数，存在大量的重复， 故使用mapactive函数
 
-    // add () {
-    //   this.$store.dispatch('add')
-    // },
+    add () {
+      this.$store.dispatch('add')
+    },
     // dec () {
     //   this.$store.dispatch('dec')
     // },

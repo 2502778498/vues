@@ -36,24 +36,43 @@ export default new Vuex.Store({
     // },
     // 或
     add ({commit, state}) {
-      console.log(state)
       commit('ADD')
 
-      function runAsync () {
-        var p = new Promise(function (resolve, reject) {
+      // Promise
+      let runAsync = () => {
+        var p = new Promise((resolve, reject) => {
           // 做一些异步操作
-          setTimeout(function () {
-            console.log('执行完成')
-            resolve('随便什么数据')
-          }, 2000)
+          setTimeout(() => {
+            var num = Math.ceil(Math.random() * 10) // 生成1-10的随机数
+            var reason = '数字太大'
+            if (num <= 5) {
+              resolve(num)
+            } else {
+              reject(reason)
+            }
+          }, 1000)
         })
         return p
       }
+      // 在then中，传入两个回调，分别执行resolve 和 reject
       runAsync().then((data) => {
+        console.log('resolved')
         console.log(data)
-        // 随便什么数据
-        // 后面可以用resolve传过来的数据做些其他操作
+      },
+      (reason) => {
+        console.log('rejected')
+        console.log(reason)
       })
+
+      // 将reject写在catch中，当resolve的回调中抛出异常时，不会报错卡死，而是会进入catch
+      // runAsync().then((data) => {
+      //   console.log('resolved')
+      //   console.log(data)
+      //   console.log(somedata) // 此处的somedata未定义
+      // }).catch((reason) => {
+      //   console.log('rejected')
+      //   console.log(reason)
+      // })
     },
     dec (context) {
       context.commit('DEC')
