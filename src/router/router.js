@@ -9,13 +9,14 @@ import page3 from '../view/axios'
 import page2 from '../view/page2/nav'
 import show from '../show'
 import Page404 from '../view/404'
+import test from '../view/test/test'
 
 Vue.use(Router)
 
 const routes = [
   {
     path: '/',
-    component: banner
+    component: test
   },
   {
     path: '/show', // 仅作为url标识
@@ -41,8 +42,11 @@ const routes = [
   },
   {
     path: '/view/page1/banner',
-    component: banner,
-    hidden: true
+    component: banner
+  },
+  {
+    path: '/view/test/test',
+    component: test
   },
   { path: '*', component: Page404 }
 ]

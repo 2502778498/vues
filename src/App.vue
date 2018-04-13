@@ -10,6 +10,7 @@
       <router-link to="/view/user/123" class="a">user123</router-link>
       <router-link to="/view/user/456" class="a">user456</router-link>
       <router-link to="/view/page1/banner" class="a">banner</router-link>
+      <router-link to="/view/test/test" class="a">test</router-link>
     </div>
     <div class="view">
        <router-view></router-view>

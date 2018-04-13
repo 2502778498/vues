@@ -4,7 +4,7 @@
       <br>
       <br>
       <br>
-      <button @click="send"> 点击发送axios请求</button>
+      <button @click="send"> 点击发送ajax请求</button>
   </div>
 </template>
 <script>
@@ -12,6 +12,7 @@ import axios from 'axios'
 export default {
   methods: {
     send () {
+      // url: /api/json数据的键
       axios.get('/api/test', {
         params: {
           ID: 12345
