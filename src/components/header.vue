@@ -13,7 +13,7 @@ export default {}
 <style lang='scss'>
 .ul li{
   list-style: none;
-  color: red;
+  // color: red;
   margin: 2rem 0;
   background-color: #cccccc;
 }

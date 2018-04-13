@@ -29,7 +29,6 @@ export default {
     // countss () {
     //   return this.$store.state.count
     // }
-
     // mapstate：接受一个对象或数组
 
     // 对象
