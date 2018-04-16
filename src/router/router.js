@@ -10,6 +10,7 @@ import page2 from '../view/page2/nav'
 import show from '../show'
 import Page404 from '../view/404'
 import test from '../view/test/test'
+import note from '../view/note/note'
 
 Vue.use(Router)
 
@@ -47,6 +48,10 @@ const routes = [
   {
     path: '/view/test/test',
     component: test
+  },
+  {
+    path: '/view/note/note',
+    component: note
   },
   { path: '*', component: Page404 }
 ]
