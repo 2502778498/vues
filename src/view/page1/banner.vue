@@ -5,8 +5,9 @@
       <li>2</li>
       <li>3</li>
     </ul>
-    <input type="text" v-model="value">
-    <div id="tip"></div>
+    <input type="text" v-model="value"><br>
+    <textarea id="tip"></textarea>
+    <br>
     <button @click="game('yes')">是</button><button @click="game('no')">否</button>
   </div>
 </template>
