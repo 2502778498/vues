@@ -5,11 +5,25 @@
       <li>2</li>
       <li>3</li>
     </ul>
+    <input type="text" v-model="value">
+    <div id="tip"></div>
+    <button @click="game('yes')">是</button><button @click="game('no')">否</button>
   </div>
 </template>
 <script>
 export default {
-
+  data () {
+    return {
+      value: ''
+    }
+  },
+  mounted () {
+    this.game()
+  },
+  methods: {
+    game (ans) {
+    }
+  }
 }
 </script>
 <style>
