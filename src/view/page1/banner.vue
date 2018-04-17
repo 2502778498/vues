@@ -6,7 +6,7 @@
       <li>3</li>
     </ul>
     <input type="text" v-model="value"><br>
-    <textarea id="tip"></textarea>
+    <textarea id="tip" style="resize:none" v-model="textarea"></textarea>
     <br>
     <button @click="game('yes')">是</button><button @click="game('no')">否</button>
   </div>
@@ -15,7 +15,8 @@
 export default {
   data () {
     return {
-      value: ''
+      value: '',
+      textarea: ''
     }
   },
   mounted () {
@@ -24,7 +25,10 @@ export default {
   methods: {
     game (ans) {
     }
-  }
+  }// ,
+  // computed () {
+
+  // }
 }
 </script>
 <style>
