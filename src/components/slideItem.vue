@@ -7,7 +7,7 @@ qwer
 import '@/loop/forRouter'
 export default {
   mounted () {
-    console.log(this.$route)
+    // console.log(loop)
   }
 }
 </script>
