@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <div class="routerPage" >
+    <div class="routerPage" id="routerPage" >
       <!-- <img src="./assets/logo.png"> -->
-      <router-link v-for="(item, index) in AllPath" :key="index" :to="item.path" class="a" style="margin: 20px 0 0;">{{item.text}}</router-link>
+      <router-link v-for="(item, index) in AllPath" :key="index" :to="item.path" class="a" @click.native="fun($event)" style="margin: 20px 0 0;">{{item.text}}</router-link>
       <!-- <slide-item></slide-item> -->
       <!--    -->
     </div>
@@ -21,7 +21,6 @@ export default {
   },
   data () {
     return {
-      isTrue: false,
       AllPath: [
         {
           path: '/view/note/note',
@@ -55,8 +54,9 @@ export default {
     }
   },
   methods: {
-    funColor (event) {
-      // const indexof = event.currentTarget.getAttribute('index')
+    fun (e) {
+      // e.currentTarget.getAttribute('index')
+      e.currentTarget.className += ' color'
     }
   }
 }
