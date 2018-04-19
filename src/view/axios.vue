@@ -18,7 +18,8 @@ export default {
           ID: 12345
         }
       }).then(function (response) {
-        console.log(response.data)
+        document.write(response.data[0].a)
+        document.write(response.data[0].b)
       }).catch(function (error) {
         console.log(error)
       })
