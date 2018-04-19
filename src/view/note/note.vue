@@ -49,5 +49,8 @@
             data中的数据:“类名”，
           }
     </pre>
+    <pre>
+      @click = 'func1, func2, num = index + 1'
+    </pre>
   </div>
 </template>

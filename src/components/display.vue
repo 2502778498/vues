@@ -53,7 +53,7 @@ export default {
     test: {
       get: function () {
         // num的值每变化一次就调用一次
-        console.log(this.num)
+        // console.log(this.num)
         return this.num + 1
       },
       set: function (newValue) {

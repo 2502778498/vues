@@ -1,18 +1,9 @@
 <template>
   <div id="app">
-    <div class="routerPage">
+    <div class="routerPage" >
       <!-- <img src="./assets/logo.png"> -->
-      <!-- <router-link to="/view/note/note" class="a">note</router-link>
-      <router-link to="/view/page1/form" class="a">form</router-link>
-      <router-link to="/show" class="a">show</router-link> -->
-
-      <!-- 动态路由 ： 获取标签内容 -->
-      <!-- <router-link to="/view/user/123" class="a">user123</router-link>
-      <router-link to="/view/user/456" class="a">user456</router-link>
-
-      <router-link to="/view/page1/banner" class="a">banner</router-link>
-      <router-link to="/view/test/test" class="a">test</router-link> -->
-      <slide-item></slide-item>
+      <router-link v-for="(item, index) in AllPath" :key="index" :index="index" :to="item.path" class="a" :class='{color: index === indexof}' @click.native="funColor($event)" style="margin: 20px 0 0;">{{item.text}}</router-link>
+      <!-- <slide-item></slide-item> -->
     </div>
     <div class="view">
        <router-view></router-view>
@@ -21,11 +12,55 @@
 </template>
 
 <script>
-import slideItem from '@/components/slideItem'
+// import slideItem from '@/components/slideItem'
 export default {
   name: 'APP',
   components: {
-    slideItem
+    // slideItem
+  },
+  data () {
+    return {
+      indexof: 1,
+      AllPath: [
+        {
+          path: '/view/note/note',
+          text: 'note'
+        },
+        {
+          path: '/view/page1/form',
+          text: 'form'
+        },
+        {
+          path: '/show',
+          text: 'show'
+        },
+        {
+          path: '/view/user/123',
+          text: 'user123'
+        },
+        {
+          path: '/view/user/456',
+          text: 'user456'
+        },
+        {
+          path: '/view/user/456',
+          text: 'user456'
+        },
+        {
+          path: '/view/page1/banner',
+          text: 'banner'
+        },
+        {
+          path: '/view/test/test',
+          text: 'test'
+        }
+      ]
+    }
+  },
+  methods: {
+    funColor (event) {
+      this.indexof = event.currentTarget.getAttribute('index')
+    }
   }
 }
 </script>
@@ -54,6 +89,9 @@ body{
         color: aliceblue;
         background-color: #333a4a;
         text-decoration: none;
+      }
+      .a.color{
+        color: red;
       }
     }
   }
