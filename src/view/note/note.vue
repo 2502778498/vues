@@ -51,6 +51,8 @@
     </pre>
     <pre>
       @click = 'func1, func2, num = index + 1'
+      @click = fun($event)
+      fun(e){ e.currentTarget --- 所点击标签 即取得该dom节点 相当于 document.getElement 取得节点 即可对dom进行操作 }
     </pre>
   </div>
 </template>

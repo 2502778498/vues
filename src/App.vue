@@ -2,8 +2,9 @@
   <div id="app">
     <div class="routerPage" >
       <!-- <img src="./assets/logo.png"> -->
-      <router-link v-for="(item, index) in AllPath" :key="index" :index="index" :to="item.path" class="a" :class='{color: index === indexof}' @click.native="funColor($event)" style="margin: 20px 0 0;">{{item.text}}</router-link>
+      <router-link v-for="(item, index) in AllPath" :key="index" :to="item.path" class="a" style="margin: 20px 0 0;">{{item.text}}</router-link>
       <!-- <slide-item></slide-item> -->
+      <!--    -->
     </div>
     <div class="view">
        <router-view></router-view>
@@ -20,7 +21,7 @@ export default {
   },
   data () {
     return {
-      indexof: 1,
+      isTrue: false,
       AllPath: [
         {
           path: '/view/note/note',
@@ -43,10 +44,6 @@ export default {
           text: 'user456'
         },
         {
-          path: '/view/user/456',
-          text: 'user456'
-        },
-        {
           path: '/view/page1/banner',
           text: 'banner'
         },
@@ -59,7 +56,7 @@ export default {
   },
   methods: {
     funColor (event) {
-      this.indexof = event.currentTarget.getAttribute('index')
+      // const indexof = event.currentTarget.getAttribute('index')
     }
   }
 }
