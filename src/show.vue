@@ -1,6 +1,7 @@
 <template>
 <div class="showPage">
   <div class="go">show测试页ww</div>
+  <img :src="imgPath">
   <router-link to="/show/page3">page3</router-link>
   <router-link to="/show/page2">page2</router-link>
   <display></display>
@@ -11,9 +12,12 @@
 <script>
 import storeCount from '@/components/storeCount'
 import display from '@/components/display'
+const imgPath = require('./assets/logo.png')
 export default {
   data () {
-    return {}
+    return {
+      imgPath
+    }
   },
   components: {
     storeCount,

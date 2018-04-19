@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <div class="routerPage" id="routerPage" >
-      <!-- <img src="./assets/logo.png"> -->
       <router-link v-for="(item, index) in AllPath" :key="index" :to="item.path" class="a" @click.native="fun($event)" style="margin: 20px 0 0;">{{item.text}}</router-link>
       <!-- <slide-item></slide-item> -->
       <!--    -->
@@ -14,6 +13,7 @@
 
 <script>
 // import slideItem from '@/components/slideItem'
+
 export default {
   name: 'APP',
   components: {

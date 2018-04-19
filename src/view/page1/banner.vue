@@ -1,9 +1,9 @@
 <template>
   <div class="banner">
     <ul class="wrap" id="wrap">
-      <li :class='{color: index === 0}' @click="index = num + 1">1</li>
-      <li :class='{color: index === 1}' @click="index = num + 2" style="margin: 10px 0;">2</li>
-      <li :class='{color: index === 2}' @click="index = num + 3">3</li>
+      <li v-for="(item, index) in liArr" :key="index">{{item}}</li>
+      <!-- <li :class='{color: index === 1}' @click="index = num + 2" style="margin: 10px 0;">2</li>
+      <li :class='{color: index === 2}' @click="index = num + 3">3</li> -->
     </ul>
     <input type="text" v-model="value"><br>
     <textarea id="tip" style="resize:none" v-model="textarea" :item='1'></textarea>
@@ -18,7 +18,8 @@ export default {
       value: '',
       textarea: '',
       num: -1,
-      index: -1
+      index: -1,
+      liArr: [1, 2, 3]
     }
   },
   mounted () {
