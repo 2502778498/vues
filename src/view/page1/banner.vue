@@ -1,7 +1,7 @@
 <template>
   <div class="banner">
     <ul class="wrap" id="wrap">
-      <li v-for="(item, index) in liArr" :key="index">{{item}}</li>
+      <li class="aa" v-for="(item, index) in liArr" :key="index" :index="index" @click="findIndex">{{item}}</li>
       <!-- <li :class='{color: index === 1}' @click="index = num + 2" style="margin: 10px 0;">2</li>
       <li :class='{color: index === 2}' @click="index = num + 3">3</li> -->
     </ul>
@@ -28,16 +28,18 @@ export default {
   methods: {
     game (ans) {
     },
-    findIndex (event) {
-      const indexLen = document.getElementById('wrap').getElementsByTagName('li').length
-      for (var i = 0; i < indexLen; i++) {
-        // const index = event.currentTarget.getAttribute('index')
-        // !function (i) {
-        //   // if (index === i) {
-        //   //   alert(ind
-        //   alert(i)
-        // }(i)
-      }
+    findIndex (e) {
+      console.log(e.target)
+      console.log(e.target.getAttribute('index'))
+      // const indexLen = document.getElementById('wrap').getElementsByTagName('li').length
+      // for (var i = 0; i < indexLen; i++) {
+      // const index = event.currentTarget.getAttribute('index')
+      // !function (i) {
+      //   // if (index === i) {
+      //   //   alert(ind
+      //   alert(i)
+      // }(i)
+      // }
       //
     }
   }// ,
