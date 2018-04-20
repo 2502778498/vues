@@ -60,5 +60,12 @@
       --- @click =' fun'
           fun(e){ e.target => 取到该dom节点 }
     </pre>
+    <pre>
+      对象的两种取值方式
+      --- obj = {a:1,b:2}
+        obj.a || obj['a']
+      --- 键为变量
+        obj[var]
+    </pre>
   </div>
 </template>
