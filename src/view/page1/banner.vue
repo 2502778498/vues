@@ -5,14 +5,13 @@
       <!-- <li :class='{color: index === 1}' @click="index = num + 2" style="margin: 10px 0;">2</li>
       <li :class='{color: index === 2}' @click="index = num + 3">3</li> -->
     </ul>
-    <input type="text" v-model="value"><br>
+    <input type="text" v-model="value" :maxlength="6" :minlength="3"><br>
     <textarea id="tip" style="resize:none" v-model="textarea" :item='1'>
-      yigeniwenwodadeyouxi
     </textarea>
     <br>
     <button @click="game('yes')">是</button><button @click="game('no')">否</button>
     <div>
-      <p id="ans"></p>
+      <p>{{ans}}</p>
       <img :src="imgSrc">
     </div>
   </div>
@@ -27,7 +26,8 @@ export default {
       num: -1,
       index: -1,
       liArr: [1, 2, 3],
-      imgSrc: ''
+      imgSrc: '',
+      ans: ''
     }
   },
   mounted () {
@@ -35,10 +35,11 @@ export default {
   },
   methods: {
     game (ans) {
+      this.ans = '······'
       axios.get('https://yesno.wtf/api')
         .then((res) => {
           console.log(res)
-          document.getElementById('ans').innerText = res.data.answer
+          this.ans = res.data.answer
           // this.imgSrc = res.data.image
         })
         .catch((err) => {

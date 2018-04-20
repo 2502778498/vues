@@ -67,5 +67,8 @@
       --- 键为变量
         obj[var]
     </pre>
+    <pre>
+       :maxlength="6" --- 限制输入框 最大长度为6
+    </pre>
   </div>
 </template>
