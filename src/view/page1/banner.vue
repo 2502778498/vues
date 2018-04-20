@@ -31,10 +31,12 @@ export default {
     }
   },
   mounted () {
-    // this.game()
+    this.game()
   },
   methods: {
     game (ans) {
+      console.log(this.$router.options)
+      console.log(this.$route)
       this.ans = '······'
       axios.get('https://yesno.wtf/api')
         .then((res) => {

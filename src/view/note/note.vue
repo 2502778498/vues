@@ -70,5 +70,10 @@
     <pre>
        :maxlength="6" --- 限制输入框 最大长度为6
     </pre>
+    <pre>
+      路由
+       this.$router --- 访问路由器 .options -- 主路由； .children -- 子路由
+       this.$route  --- 访问当前路由
+    </pre>
   </div>
 </template>
