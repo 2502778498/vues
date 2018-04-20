@@ -13,11 +13,11 @@
       </el-form-item>
     </el-form>
   </div>
-  <input type="checkbox">
-  <input type="checkbox">
-  <input type="checkbox">
-  <input type="checkbox">
-  <button @click="check">选中checkbox</button>
+  <input type="checkbox" :checked='checks'>
+  <input type="checkbox" :checked='checks'>
+  <input type="checkbox" :checked='checks'>
+  <input type="checkbox" :checked='checks'>
+  <input type="checkbox" id="btn" @click="check">
 </div>
 </template>
 
@@ -39,6 +39,7 @@ export default {
       }
     }
     return {
+      checks: false,
       ruleForm: {
         age: '',
         name: ''
@@ -56,15 +57,19 @@ export default {
   },
   methods: {
     check () {
-      let input = document.getElementsByTagName('input')
-      let l = input.length
-      // console.log(l)
-      for (let i = 0; i < l; i++) {
-        if (input[i].type === 'checkbox' && input[i].checked) {
-          for (let j = 0; j < l; j++) {
-            input[j].checked = true
-          }
-        }
+      // let input = document.getElementsByTagName('input')
+      // let l = input.length
+      // // console.log(l)
+      // for (let i = 0; i < l; i++) {
+      // if (input[i].type === 'checkbox' && input[i].checked) {
+      //   for (let j = 0; j < l; j++) {
+      // console.log(input[i].checked)
+      // }
+      // }
+      // }
+      console.log(document.getElementById('btn').checked)
+      if (document.getElementById('btn').checked) {
+        this.checks = true
       }
     }
   }
