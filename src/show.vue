@@ -1,7 +1,7 @@
 <template>
 <div class="showPage">
   <div class="go">show测试页ww</div>
-  <img :src="imgPath">
+  <img :src="imgPath" class="img">
   <router-link to="/show/page3">page3</router-link>
   <router-link to="/show/page2">page2</router-link>
   <display></display>
@@ -39,6 +39,10 @@ export default {
     width: 10rem;
     height: 10rem;
     border-radius: .5rem;
+  }
+  .img{
+    width: 100px;
+    height: 100px;
   }
 }
 </style>

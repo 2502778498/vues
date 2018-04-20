@@ -67,7 +67,6 @@ export default {
       // }
       // }
       // }
-      console.log(document.getElementById('btn').checked)
       if (document.getElementById('btn').checked) {
         this.checks = true
       }
